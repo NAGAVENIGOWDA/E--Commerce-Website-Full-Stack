@@ -18,6 +18,18 @@ body {
   }
 }
 
+::-webkit-scrollbar{
+  width: 8px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ccc !important;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent !important;
+}
 
 .headerWrapper .top-strip {
   padding: 10px 0px;
@@ -34,6 +46,10 @@ body {
   height: auto;
   padding: 15px 0px;
   
+}
+.headerWrapper{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  padding-bottom: 10px;
 }
 
 header .logoWrapper .tagline{
@@ -77,17 +93,16 @@ header .logoWrapper .tagline{
 }
 
 
-header .headerSearch {
+ .headerSearch {
   width: 60%;
   height: 60px;
   background-color: #f3f4f7;
   padding: 10px;
-  margin-left: 10px;
   position: relative;
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-header .headerSearch input{
+ .headerSearch input{
 background-color: transparent !important;
 outline: none !important;
 font-size: 14px;
@@ -100,7 +115,7 @@ padding: 0px 20px !important;
 
 }
 
-header .headerSearch button{
+ .headerSearch button{
   position: absolute;
   top: 10px;
   right: 15px;
@@ -111,7 +126,7 @@ header .headerSearch button{
   border-radius: 50% !important;
   color: #000;
 }
-header .headerSearch button svg{
+ .headerSearch button svg{
   font-size: 25px;
   
 }
@@ -167,6 +182,46 @@ background: #fff1ee !important;
 
 .locationModal .MuiPaper-elevation{
   padding: 25px;
+  position: relative;
+}
+.locationModal .countryList{
+  margin-bottom: 0px;
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.locationModal .countryList li{
+  width: 100%;
+  list-style: none;
+}
+.locationModal .countryList li Button{
+  width: 100%;
+  text-transform: capitalize !important;
+  color: #000;
+  justify-content: flex-start;
+  padding: 12px 10px;
+}
+
+.locationModal .countryList li Button :hover{
+  background-color: #f1f1f1 !important;
+}
+
+.locationModal .countryList li button.active{
+  background-color: #f7f3f3 !important;
+}
+.locationModal .close_{
+position: absolute;
+top: 10px;
+right: 10px;
+color: #000 !important;
+min-width: 40px !important;
+width: 40px !important;
+height: 40px !important;
+border-radius: 50% !important;
+}
+
+.locationModal .close_ svg{
+  font-size: 22px;
 }
 
 nav .container{
